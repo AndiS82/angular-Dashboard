@@ -11,7 +11,11 @@ import { NoChartComponent } from './components/dashboard/edit-mode/dashboard-ele
 import { LineChartComponent } from './components/dashboard/edit-mode/dashboard-element/line-chart/line-chart.component';
 import { BarchartComponent } from './components/dashboard/edit-mode/dashboard-element/barchart/barchart.component';
 import { PieChartComponent } from './components/dashboard/edit-mode/dashboard-element/pie-chart/pie-chart.component';
-import { Top5Component } from './components/dashboard/edit-mode/dashboard-element/top5/top5.component';
+import { Top3Component } from './components/dashboard/edit-mode/dashboard-element/top3/top3.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -24,13 +28,16 @@ import { Top5Component } from './components/dashboard/edit-mode/dashboard-elemen
     LineChartComponent,
     BarchartComponent,
     PieChartComponent,
-    Top5Component
+    Top3Component,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    NgApexchartsModule,
+    MatIconModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [provideAnimationsAsync()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

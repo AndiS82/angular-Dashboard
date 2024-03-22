@@ -1,1 +1,36 @@
-<p>dashboard works!</p>
+<header>
+  <div class="container">
+    <h1 class="headline">Dashboard</h1>
+    <div class="buttonContainer">
+      <section>
+        <div class="buttonRow">
+          <div>
+            <button
+              [style.color]="editMode ? '#3f51b5' : 'black'"
+              (click)="toggleEditMode()"
+              mat-icon-button
+              aria-label="A pen icon"
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button *ngIf="editMode" mat-icon-button aria-label="A plus icon">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="textContainer">
+    <p class="description">
+      Willkommen auf Ihrem persönlichem Dashboard. Hier können Sie sich einen
+      schnellen Überblick verschaffen.
+    </p>
+    <p [style.visibility]="!editMode ? 'hidden' : 'visible'">
+      Im Bearbeitungsmodus können Sie neue Elemente erstellen, mit Drag & Drop
+      beliebig anordnen und löschen.
+    </p>
+  </div>
+</header>
+<main></main>
+<footer></footer>

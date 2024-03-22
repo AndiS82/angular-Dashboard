@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Top5Component } from './top5.component';
+import { Top5Component } from './top3.component';
 
 describe('Top5Component', () => {
   let component: Top5Component;
@@ -8,9 +8,8 @@ describe('Top5Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Top5Component ]
-    })
-    .compileComponents();
+      declarations: [Top5Component],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Top5Component);
     component = fixture.componentInstance;
